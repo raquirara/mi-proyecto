@@ -1,0 +1,258 @@
+body {
+	max-height: 300px;
+}
+
+* {
+	margin: 0;
+	font-family: Poppins, Verdana;
+}
+
+.bg {
+	background-color: black;
+	background-image: url(../img/bg-portada2.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center top 15%;
+}
+
+.bg-formacion {
+	background-color: black;
+	background-image: url(../img/cont-1.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center top;
+}
+
+/* ====== HEADER ====== */
+
+/* ====== MENÚ HAMBURGUESA ====== */
+
+
+.span1 {
+	width: 40px;
+	height: 24px;
+	border-radius: 4px;
+	display: block;
+	position: absolute;
+}
+
+.span2 {
+	width: 40px;
+	height: 4px;
+	border-radius: 4px;
+	display: block;
+	position: absolute;
+	background: black;
+	margin-top: 0;
+}
+ 
+.span3 {
+	width: 40px;
+	height: 4px;
+	border-radius: 4px;
+	display: block;
+	position: absolute;
+	background: black;
+	margin-top: 12px;
+}
+
+.span4 {
+	width: 40px;
+	height: 4px;
+	border-radius: 4px;
+	display: block;
+	position: absolute;
+	background: black;
+	margin-top: 24px;
+}
+
+.opciones-hamburguesa {
+	position: fixed;
+	width: 0%;
+	height: 50vh;
+	left: 0;
+	bottom: 0;
+	top: 0;
+	right: 0;
+	background-color: rgb(0, 0, 0, 0.85);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.menu-principal:hover .opciones-hamburguesa {
+	transition: width 1.5s ease-in-out;
+    width:100%;
+}
+
+.opciones-hamburguesa ul {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+	list-style: none;
+}
+
+.opciones-hamburguesa a {
+	color: white;
+}
+
+.menu-inicio a {
+	background-color: white;
+	color: black;
+	padding-left: 10px;
+}
+
+.menu-inicio a:hover {
+	background-color: rgb(0, 0, 0, 0.85);
+	color: white;
+	border: 2px solid white;
+}
+
+li a:hover {
+	border-bottom: 2px solid white;
+}
+
+.opciones-hamburguesa li {
+	margin: 0.5em 0;
+}
+ 
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1em;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bolder;
+	text-transform: uppercase;
+	color: black;
+	letter-spacing: 5px;
+	padding: 5px;
+}
+
+.enlace-boton:active, .inicio a:active, .contacto a:active, .secciones a:active {
+	box-shadow: 0 0 0 3px rgb(0, 0, 0, 0.8);
+	background-color: rgb(0, 0, 0, 0.8);
+	color: white;
+}
+
+.enlace-boton:hover, .inicio a:hover, .contacto a:hover, .secciones a:hover {
+	box-shadow: 0 0 0 3px rgb(0, 0, 0, 0.8);
+}
+
+.contenedor a {
+	color: white;
+}
+
+.derecha {
+	margin-right: auto;
+}
+
+/* ====== SECTION: PORTADA ====== */
+
+.hola {
+	font-size: 3em;
+	display: block;
+}
+
+.portada {
+	padding: 4em;
+	height: 30vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.subportada {
+	display: flex;
+	flex-direction: column;
+	padding-top: 1.5em;
+}
+
+/*.formacion-cabecera {
+	background-image: url(../img/cont-1.jpg);
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position:center top 43%;
+	height: 40vh;
+}*/
+
+.texto-portada {
+	width: 45%;
+}
+
+.boton-portada {
+	width: 45%;
+	padding: 1.5em 0 1.5em 0;
+}
+
+/* ====== SECTION: CONTENEDOR ====== */
+
+
+
+/* ====== FOOTER ====== */
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 7vh;
+}
+
+/* ====== MEDIA QUERY ====== */
+
+@media (max-width: 900px) {
+
+	.secciones {
+		overflow: hidden;
+	}
+
+	.portada {
+		background-attachment: fixed;
+		background-size: 160%;
+		background-position: left top;
+		height: 50vw;
+	}
+
+	.contenedor {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
+	
+	.box {
+		width: 100vw;
+		height: 40vh;
+	}
+	
+	.texto-portada {
+		width: 70%;
+	}
+	
+	/*.boton-portada {
+		width: 70%;
+		padding: 1.5em 0 1.5em 0;
+	}*/
+
+	.presentacion {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: rgb(0, 0, 0, 0.7);
+		padding: 2em 2em;
+		gap: 1.5em;
+	}
+
+	footer {
+		background-color: rgb(255, 192, 203, 0.8);
+	}
+
+}
